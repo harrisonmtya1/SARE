@@ -6,6 +6,7 @@ import { ShareRouting } from './share.routing';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     ShareRouting,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    FormsModule
   ]
 })
 export class ShareModule { }
