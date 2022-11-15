@@ -6,18 +6,18 @@
 </div>
 <div class="d-flex justify-content-center">
 <form #formLogin="ngForm" (ngSubmit)="ingresar()">
-    <div class="row m-4">
-        <span class="p-float-label">
+    
+        <span class="p-float-label m-4">
             <input id="usuario" type="text" pInputText [(ngModel)]="usuario.nombre" name="usuario"> 
             <label for="usuario">Usuario</label>
         </span>
-    </div>
-    <div class="row m-4">
-        <span class="p-float-label">
+    
+    
+        <span class="p-float-label m-4">
             <input id="clave" type="password" pInputText   [(ngModel)]="usuario.clave" name="clave" > 
             <label for="clave">Contraseña</label>
         </span>
-    </div>
+    
     <div class="row m-4">
         <a href="#">¿Olvido su contraseña?</a>
     </div>

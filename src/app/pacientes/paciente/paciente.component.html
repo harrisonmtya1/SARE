@@ -1,27 +1,96 @@
+<div class="col-12 m-4">
 
-
-<div class="col">
     <div class="row">
+        <h2>Gestio de Pacientes</h2>
+    </div>
+
+
+    <div class="col">
+
         <form>
-           <div class="d-flex">
-            
-                <span class="p-float-label">
-                    <input id="Nombre" type="text" pInputText > 
-                    <label for="Nombre">Nombre</label>
-                </span>
+            <div class="d-flex">
 
-                <span class="p-float-label">
-                    <input id="Identificacion" type="text" pInputText > 
-                    <label for="Identificacion">Identificacion</label>
-                </span>
+                <div class="col-4">
+                    <div>
+                        <span class="p-float-label m-4">
+                            <input id="Nombre" type="text" pInputText>
+                            <label for="Nombre">Nombre</label>
+                        </span>
+                    </div>
 
-                <span class="p-float-label">
-                    <input id="EPS" type="text" pInputText > 
-                    <label for="EPS">EPS</label>
-                </span>
-            
-           </div>  
+                    <div class="row m-4">
+                        <div class="col-3">
+                            <label>Genero</label>
+                        </div>
+                        <div class="col-3">
+                            <p-radioButton class="m-2" name="genero" value="val1" label="Masculino"
+                                [(ngModel)]="genero"> </p-radioButton>
+                            <p-radioButton class="m-2" name="genero" value="val2" label="Femenino" [(ngModel)]="genero">
+                            </p-radioButton>
+                        </div>
+                    </div>
+
+                    <div class="row m-2">
+                        <label for="icon">Fecha de nacimiento</label>
+                         <p-calendar [(ngModel)]="fecha" [showIcon]="true" inputId="icon"></p-calendar>
+                    </div>
+                    <div >
+                        <span class="p-float-label m-4">
+                            <textarea id="float-input" rows="5" cols="30" pInputTextarea></textarea>
+                            <label for="float-input">Antecedestes Clinicos</label>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <span class="p-float-label m-4">
+                        <input id="Identificacion" type="text" pInputText>
+                        <label for="Identificacion">Identificacion</label>
+                    </span>
+
+                    <span class="m-4">
+                        <p-dropdown [options]="cities"  optionLabel="name" name="cidad" placeholder="Tipo de identificacion"></p-dropdown>
+                    </span>
+                    
+
+                    <span class="p-float-label m-4">
+                        <input id="EPS" type="text" pInputText>
+                        <label for="EPS">EPS</label>
+                    </span>
+
+                    <span class="p-float-label m-4">
+                        <input id="Direccion" type="text" pInputText>
+                        <label for="Direccion">Direccion de recidencia</label>
+                    </span>
+
+                    <span class="p-float-label m-4">
+                        <input id="Telefono" type="text" pInputText>
+                        <label for="Telefono">Telefono</label>
+                    </span>
+
+                    <span class="p-float-label m-4">
+                        <input id="Tratamientos" type="text" pInputText>
+                        <label for="Tratamientos">Tratamientos/Medicamentos</label>
+                    </span>
+                </div>
+                <div class="col-3">
+                    <div class="d-flex flex-column justify-content-evenly m-4">
+                        <button pButton type="button" label="Guardar" class=" p-button-lg m-2"></button>
+                        <button pButton type="button" label="Eliminar" class="  p-button-lg m-2"></button>
+                        <button pButton type="button" label="Buscar" class=" p-button-lg m-2"></button>
+                        <button pButton type="button" label="Nuevo" class=" p-button-lg m-2"></button>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
         </form>
+
+
     </div>
 
 </div>
