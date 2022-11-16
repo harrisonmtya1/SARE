@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { AdministracionRoutingModule } from './administracion-routing.module';
 import { PrincipalComponent } from './principal/principal.component';
 import { MenuComponent } from './menu/menu.component';
+import {MegaMenuModule} from 'primeng/megamenu';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { MenuComponent } from './menu/menu.component';
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    MegaMenuModule,
+    FormsModule
   ]
 })
 export class AdministracionModule { }
