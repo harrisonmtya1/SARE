@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {CalendarModule} from 'primeng/calendar';
 import {DropdownModule} from 'primeng/dropdown';
-
+import {TableModule} from 'primeng/table';
 
 
 @NgModule({
@@ -23,7 +23,8 @@ import {DropdownModule} from 'primeng/dropdown';
     FormsModule,
     RadioButtonModule,
     CalendarModule,
-    DropdownModule
+    DropdownModule,
+    TableModule
   ]
 })
 export class PacientesModule { }

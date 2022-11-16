@@ -1,1 +1,156 @@
-<p>examen works!</p>
+<div class="col-12 m-4">
+
+    <div class="row">
+        <h2>Gestio de Resultados</h2>
+    </div>
+    <div class="col">
+        <form>
+            <div class="d-flex">
+
+                <div class="col-3">
+                    <div>
+                        <span class="p-float-label m-4">
+                            <input id="Nombre" type="text" pInputText>
+                            <label for="Nombre">Nombre</label>
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="p-float-label m-4">
+                            <input id="campo1" type="text" pInputText>
+                            <label for="campo1">Dimension diastolica (mm)</label>
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="p-float-label m-4">
+                            <input id="campo2" type="text" pInputText>
+                            <label for="campo2">Dimension sistolica (mm)</label>
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="p-float-label m-4">
+                            <input id="campo3" type="text" pInputText>
+                            <label for="campo3">Grosor parietal</label>
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="p-float-label m-4">
+                            <input id="campo4" type="text" pInputText>
+                            <label for="campo4">Masa VI/ASC (g/m)</label>
+                        </span>
+                    </div>
+
+
+                </div>
+                <div class="col-3">
+                    <span class="p-float-label m-4">
+                        <input id="Identificacion" type="text" pInputText>
+                        <label for="Identificacion">Identificacion</label>
+                    </span>
+
+                    
+                    <span class="p-float-label m-4">
+                        <input id="VFD" type="text" pInputText>
+                        <label for="VFD">VFD (mL)</label>
+                    </span>
+
+                    <span class="p-float-label m-4">
+                        <input id="VFS" type="text" pInputText>
+                        <label for="VFS">VFS (mL)</label>
+                    </span>
+
+                    <span class="p-float-label m-4">
+                        <input id="Grosor" type="text" pInputText>
+                        <label for="Grosor">Grosor septal</label>
+                    </span>
+
+                    <span class="p-float-label m-4">
+                        <input id="Masa VI" type="text" pInputText>
+                        <label for="Masa VI">Masa VI (g)</label>
+                    </span>
+                </div>
+                <div class="col-3">
+                    <div class="row m-2">
+                        <label for="icon">Fecha de examen</label>
+                        <p-calendar [(ngModel)]="fecha" [showIcon]="true" inputId="icon"></p-calendar>
+                    </div>
+
+                    <div>
+                        <span class="p-float-label m-4">
+                            <input id="VDF2" type="text" pInputText>
+                            <label for="VDF2">VDF (mL/m^2)</label>
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="p-float-label m-4">
+                            <input id="VFS2" type="text" pInputText>
+                            <label for="VFS2">VFS (mL/m^2)</label>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="p-float-label m-4">
+                            <input id="grosorpared" type="text" pInputText>
+                            <label for="grosorpared">Grosor pared posterior</label>
+                        </span>
+                    </div>
+
+
+
+                </div>
+                <div class="col-3">
+                    <div class="d-flex flex-column justify-content-evenly m-4">
+                        <div class="row text-center mb-4">
+                            <div class="col-6">
+                                <button pButton type="button" label="Imprimir" class=" p-button-lg "></button>
+                            </div>
+                            <div class="col-6">
+                                <button pButton type="button" label="Enviar al correo" class="  p-button-lg "></button>
+                            </div>
+                                                
+                        </div>
+                        <button pButton type="button" label="Guardar" class=" p-button-lg m-2"></button>
+                        <button pButton type="button" label="Eliminar" class="  p-button-lg m-2"></button>
+                        <button pButton type="button" label="Buscar" class=" p-button-lg m-2"></button>
+                        <button pButton type="button" label="Nuevo" class=" p-button-lg m-2"></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div>
+            <span class="p-float-label m-4">
+                <textarea id="float-input" rows="5" cols="180" pInputTextarea></textarea>
+                <label for="float-input">Conclusiones del examen</label>
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <p-table [value]="pacientes" [tableStyle]="{'min-width': '50rem'}">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Documento</th>
+                    <th>Genero</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>EPS</th>
+                    <th>Tratamientos/Medicamentos</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-paciente>
+                <tr>
+                    <td>{{paciente.nombre}}</td>
+                    <td>{{paciente.documento}}</td>
+                    <td>{{paciente.genero}}</td>
+                    <td>{{paciente.nacimiento}}</td>
+                    <td>{{paciente.eps}}</td>
+                    <td>{{paciente.medicamento}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
