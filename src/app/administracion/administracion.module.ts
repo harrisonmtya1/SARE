@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdministracionRoutingModule } from './administracion-routing.module';
 import { PrincipalComponent } from './principal/principal.component';
 import { MenuComponent } from './menu/menu.component';
-import {MegaMenuModule} from 'primeng/megamenu';
+import {MenubarModule} from 'primeng/menubar';
 import { FormsModule } from '@angular/forms';
 
 
@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AdministracionRoutingModule,
-    MegaMenuModule,
+    MenubarModule,
     FormsModule
   ]
 })
